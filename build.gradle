@@ -1,0 +1,19 @@
+apply plugin: 'java'
+ 
+repositories {
+    gradlePluginPortal()
+}
+ 
+dependencies {
+    testImplementation('org.junit.jupiter:junit-jupiter:5.5.2')
+}
+
+buildScan {
+    termsOfServiceUrl = 'https://gradle.com/terms-of-service'
+    termsOfServiceAgree = 'yes'
+}
+
+test {
+  useJUnitPlatform()
+  outputs.upToDateWhen { false }
+}
